@@ -1,0 +1,538 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #6c757d;
+    --accent-color: #ffd333;
+    --contrast-color: #3d464d;
+    --gray-color: #ccc;
+    --red-color: #ee6e73;
+    --light-gray-color: #eee;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Comfortaa", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn, 
+.dropdown-menu,
+.form-control,
+.form-select {
+    border-radius: 0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: var(--gray-color);
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.btn-outline-warning {
+    border-color: var(--accent-color);
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);
+}
+
+main.main {
+    flex: 1 1 auto;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.section-title {
+    position: relative;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 700;
+}
+
+.section-title span {
+    background-color: var(--bg-color);
+    padding-right: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 50%;
+    left: 0;
+    border-top: 1px solid var(--text-color);
+}
+
+.bg-white .section-title span {
+    background-color: #fff;
+}
+
+/* ===================== Get diplom START =======================*/
+
+.get-diplom-imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+    max-height: 650px;
+}
+
+.get-diplom-imgs img {
+    padding: 10px 20px 10px 10px;
+}
+
+.get-diplom-imgs img:hover {
+    cursor: pointer;
+}
+
+.get-diplom-imgs::-webkit-scrollbar {
+    width: 5px;
+}
+
+.get-diplom-imgs::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.get-diplom-imgs::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(--accent-color);
+}
+
+.row.input-fields-wrapper {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get-diplom-data {
+    padding-right: 1rem;
+}
+
+.get-diplom-data .section-title::after {
+    display: none;
+}
+
+.get-diplom-data .subtitle {
+    font-size: 13px;
+}
+
+.get-diplom-data input,
+.get-diplom-data select {
+    border-color: var(--accent-color);
+}
+
+.get-diplom-text {
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--contrast-color);
+    min-width: 300px;
+}
+
+.get-diplom-text .name {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.get-diplom-text img {
+    max-width: 200px;
+    padding-top: 0.4rem;
+}
+
+.get-diplom-date {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--contrast-color);
+}
+
+.make-pdf {
+    max-width: fit-content;
+}
+
+.get-diplom-img {
+    max-width: fit-content;
+}
+
+.get-diplom-img img {
+    min-height: 650px;
+}
+
+.input-fields-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===================== Header START =======================*/
+
+.header-top-phone a {
+    text-decoration: none;
+    line-height: 1rem;
+    color: var(--contrast-color);
+    transition: all .5s;
+}
+
+.header-top-phone a:hover {
+    color: var(--accent-color);
+}
+
+.header-top .btn {
+    background-color: #fff;
+}
+
+.header-middle .logo {
+    max-width: 250px;
+}
+
+.header-bottom {
+    border-top: 3px solid var(--accent-color);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.header-bottom .navbar,
+.header-bottom .navbar .dropdown-menu {
+    background-color: var(--contrast-color) !important;
+}
+
+.header-bottom .nav-item:first-child .nav-link {
+    padding-left: 0;
+}
+
+.header-bottom .navbar .nav-link {
+    color: #fff;
+    transition: all .5s;
+    letter-spacing: .1rem;
+}
+
+.header-bottom .navbar .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.header-bottom .navbar .nav-link.active {
+    color: var(--accent-color);
+}
+
+.header-bottom .navbar .dropdown-menu {
+    margin-top: 7px;
+}
+
+.header-nav-scroll.header-bottom .navbar .offcanvas:not(.show) .nav-link {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.header-top .btn-group .btn {
+    border: 0 !important;
+}
+
+/* ===================== Header END =======================*/
+
+
+/* ===================== Footer START =======================*/
+
+footer {
+    background-color: var(--contrast-color);
+    padding: 50px;
+    color: #fff;
+}
+
+footer h4 {
+    color: var(--accent-color);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer-icons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    font-size: 20px;
+}
+
+/* ===================== Footer END =======================*/
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    opacity: .7;
+    color: #fff;
+    width:  50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 25px;
+    transition: all .5s;
+    z-index: 100;
+    display: none;
+}
+
+#top:hover {
+    opacity: 1;
+}
+
+
+/* ===================== Breadcrumbs START =======================*/
+
+.breadcrumbs {
+    margin: 30px 0;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--contrast-color);
+    transition: all .5s;
+    padding-right: .5rem;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumbs a::after {
+    content: '/';
+    padding-left: 0.5rem;
+    color: var(--contrast-color);
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.loader.fade {
+    display: block;
+    opacity: 1;
+}
+
+.loader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        width: 100%;
+    }
+    .get-diplom-imgs {
+        flex-direction: row;
+    }
+    .get-diplom .make-pdf-wrapper {
+        order: 1;
+    }
+    .get-diplom .data-wrapper {
+        order: 2;
+    }
+    .get-diplom .imgs-wrapper {
+        order: 3;
+    }
+    .get-diplom-imgs img {
+        padding: 0;
+        max-width: 130px;
+        margin: 20px 0;
+    }
+    .get-diplom-imgs::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .get-diplom-imgs::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    .get-diplom-imgs::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--accent-color);
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .container {
+        max-width: 1140px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .header-bottom .navbar .dropdown-menu {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    #offcanvasNavbar {
+        width: 600px;
+    }
+    .get-diplom-img img {
+        min-height: unset;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .get-diplom .data-wrapper {
+        order: 3;
+        padding-top: 20px;
+    }
+
+    .get-diplom .imgs-wrapper {
+        order: 2;
+    }
+    .get-diplom-imgs img {
+        max-width: 100px;
+    }
+    .section-title::after {
+        display: none;
+    }
+    .breadcrumbs {
+        margin: 0;
+    }
+    section {
+        padding: 25px 0;
+    }
+    footer {
+        padding: 25px;
+    }
+    #offcanvasNavbar {
+        width: 100%;
+    }
+    button.navbar-toggler {
+        border: 0;
+    }
+    button.navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .get-diplom-text {
+        font-size: 13px;
+        max-width: 75%;
+        width: 100%;
+        min-width: unset;
+    }
+    .get-diplom-text .name {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .product-content-details .nav-tabs .nav-link {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    a.dropdown-item {
+        font-size: 12px;
+    }
+
+    .nav-item .dropdown-menu a.dropdown-item {
+        padding: 5px 0;
+        font-size: 12px;
+    }
+    .header-bottom .navbar .dropdown-menu {
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+    .header-top-phone a {
+        font-size: 14px;
+    }
+    select option {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .get-diplom-text {
+        font-size: 12px;
+    }
+
+    .get-diplom-text .name {
+        font-size: 14px;
+    }
+
+    .header-top .btn-group .btn {
+        padding: 0;
+    }
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .header-bottom .navbar .dropdown-menu-end {
+        margin-left: 0;
+        margin-top: 0;
+        border: 0;
+    }
+
+    .header-bottom .navbar .nav-link {
+        padding: 1rem;
+    }
+}
