@@ -55,6 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
     pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
     pdf.save('diplom.pdf');
   }
+
+  const dateInput = document.getElementById('date');
+
+    dateInput.addEventListener('focus', () => {
+      dateInput.placeholder = '';
+    });
+    
+    dateInput.addEventListener('blur', () => {
+      if (!dateInput.value) dateInput.placeholder = 'Выберите дату';
+    });
+
   
 });
 
