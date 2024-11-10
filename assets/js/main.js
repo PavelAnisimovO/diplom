@@ -55,17 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
     pdf.save('diplom.pdf');
   }
-
-  const input = document.querySelector('#date'); 
-  
-    input.addEventListener('focus', function(){
-      this.type = 'date';
-    });
-    input.addEventListener('blur', function(){
-      if(this.value === '') {
-        this.type = 'text'; 
-      }
-  });
   
 });
 
