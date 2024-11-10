@@ -207,6 +207,34 @@ section {
     gap: 15px;
 }
 
+input[type="date"]:not(:placeholder-shown)::before {
+  content: attr(placeholder);
+  color: #aaa;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.date-input-wrapper {
+  position: relative;
+}
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  color: #aaa;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:not(:placeholder-shown)::before {
+  display: none;
+}
+
+
 /* ===================== Header START =======================*/
 
 .header-top-phone a {
